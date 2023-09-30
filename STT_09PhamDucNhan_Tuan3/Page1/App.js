@@ -1,106 +1,51 @@
 
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <View style={styles.header}>
-        <Image style={styles.imgHearder} source={require('./assets/circle.png')} />
-        <View style={styles.textCenter}>
-          <Text style={styles.text1}>GROW</Text>
-          <Text style={styles.text1}>YOUR BUSINESS</Text>
-        </View>
-      </View>
-      <View style={styles.body}>
-        <View style={styles.textBody}>
-          <Text style={styles.text2}>We will help you to grow your business using</Text>
-          <Text style={styles.text2}>online server</Text>
-        </View>
-        <View style={styles.btnBody}>
-          <View style={styles.btn}>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.textBtn}>LOGIN</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button}>
-              <Text style={styles.textBtn}>SIGN UP</Text>
-            </TouchableOpacity>
-          </View>
-          <Text style={styles.text3}>HOW WE WORK?</Text>
-        </View>
-      </View>
-    </View>
-  );
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Page1 from './views/Page1';
+import Page2 from './views/Page2';
+import Page3 from './views/Page3';
+import Page4 from './views/Page4';
+import Page5 from './views/Page5';
+import Page6 from './views/Page6';
+import Page7 from './views/Page7';
+
+
+const Tab = createBottomTabNavigator();
+const screenOptions = {
+  tabBarShowLabel: true,
+  headerShown: false,
+  tabBarStyle: {
+    backgroundColor: '#fff',
+    borderwidth: 1,
+    borderColor: '#red',
+  }
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  header: {
-    height: '60%',
-    alignItems: 'center',
-    justifyContent: 'space-around'
-
-  },
-  body: {
-    height: '40%',
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'space-around',
-  },
-  imgHearder: {
-    width: 140,
-    height: 140,
-    borderRadius: 100,
-    borderWidth: 2,
-    borderColor: '#000',
-  },
-  textCenter: {
-    alignItems: 'center',
-  },
-  textBody: {
-    alignItems: 'center',
-  },
-  text1: {
-    display: 'block',
-    fontSize: 25,
-    fontWeight: 'bold',
-  },
-  text2: {
-    display: 'block',
-    fontSize: 15,
-    fontWeight: 'bold',
-    color: '#000',
-  },
-  text3: {
-    display: 'block',
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: '#000',
-    textAlign: 'center',
-    paddingTop: 10,
-  },
-  btnBody:{
-    justifyContent: 'space-around',
-  },
-  btn: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-  },
-  button: {
-    width: 120,
-    height: 50,
-    borderRadius: 10,
-    backgroundColor: '#E3C000',
-  },
-  textBtn: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#000',
-    textAlign: 'center',
-    paddingTop: 10,
-  },
-});
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={screenOptions}
+        initialRouteName='Page1'
+      >
+        <Tab.Screen
+          name="Page1" component={Page1}
+          options={{
+            tabBarLabel: 'Page1',
+            // tabBarIcon: ({ }) => (
+            //   <MaterialCommunityIcons   name="Page1" color={'red'} size={'30px'} />
+            // ),
+          }} />
+        <Tab.Screen name="Page2" component={Page2} />
+        <Tab.Screen name="Page3" component={Page3} />
+        <Tab.Screen name="Page4" component={Page4} />
+        <Tab.Screen name="Page5" component={Page5} />
+        <Tab.Screen name="Page6" component={Page6} />
+        <Tab.Screen name="Page7" component={Page7} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}

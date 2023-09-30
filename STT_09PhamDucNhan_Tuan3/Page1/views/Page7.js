@@ -1,17 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native';
 
-export default function App() {
+export default function Page7() {
   return (
     <View style={styles.container}>
-        <Image style={{ width: 140, height: 140, }} source={require('./assets/eyePro.png')} />
+        <Image style={{ width: 140, height: 140, }} source={require('../assets/eyePro.png')} />
         <View>
         <TextInput  style={{color:'#C4C4C4', backgroundColor: '#fff', width: 330, height: 54, borderBottomWidth:1, fontSize: 20, paddingLeft: 60, marginBottom: 50 }} placeholder='Please input user name' />
-        <Image style={{ width: 38, height: 36, position: 'absolute', top: 8, left: 5 }} source={require('./assets/us.png')} />
+        <Image style={{ width: 38, height: 36, position: 'absolute', top: 8, left: 5 }} source={require('../assets/us.png')} />
         </View>
         <View>
         <TextInput style={{color:'#C4C4C4', backgroundColor: '#fff', width: 330, height: 54, borderBottomWidth:1, fontSize: 20, paddingLeft: 60, marginBottom: 50 }} placeholder='Please input user password' />
-        <Image style={{ width: 38, height: 36, position: 'absolute', top: 8, left: 5 }} source={require('./assets/ps.png')} />
+        <Image style={{ width: 38, height: 36, position: 'absolute', top: 8, left: 5 }} source={require('../assets/ps.png')} />
         </View>
         <TouchableOpacity style={{borderRadius:10, width: 330, height: 48, backgroundColor: '#386FFC', marginTop: 20, justifyContent: 'center', alignItems: 'center' }}>
           <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#fff' }}>LOGIN</Text>
@@ -30,9 +30,9 @@ export default function App() {
           <View style={{width:80,height:1,borderColor:'#000',borderWidth:1}}></View>
         </View>
         <View style={{flexDirection:'row',justifyContent:'space-around', width:'100%',marginTop:50}}>
-          <Image style={{width:74,height:74}} source={require('./assets/add.png')}/>
-          <Image style={{width:74,height:74}} source={require('./assets/wifi.png')}/>
-          <Image style={{width:74,height:74}} source={require('./assets/facebook.png')}/>
+          <Image style={{width:74,height:74}} source={require('../assets/add.png')}/>
+          <Image style={{width:74,height:74}} source={require('../assets/wifi.png')}/>
+          <Image style={{width:74,height:74}} source={require('../assets/facebook.png')}/>
           <Text style={{fontSize:70,fontWeight:'bold',color:'#fff',position:'absolute',right:50,top:-7}}>f</Text>
         </View>
     </View>

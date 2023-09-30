@@ -1,7 +1,7 @@
 import RadioForm, { } from 'react-native-simple-radio-button';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Image } from 'react-native';
 
-export default function App() {
+export default function Page5() {
   return (
     <View style={styles.container}>
       <Text style={{ fontSize: 25, fontWeight: 'bold', marginTop: 50 }}>REGISTER</Text>
@@ -9,8 +9,8 @@ export default function App() {
       <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Phone' />
       <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Email' />
       <View>
-        <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Password' />
-        <Image style={{ width: 38, height: 36, position: 'absolute', right: 10, top: 10 }} source={require('./assets/eye.png')} />
+        <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 40, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Password' />
+        <Image style={{ width: 38, height: 36, position: 'absolute', right: 10, top: 0 }} source={require('../assets/eye.png')} />
       </View>
 
       <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 20 }} placeholder='BirthDay' />
