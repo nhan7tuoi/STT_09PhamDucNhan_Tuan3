@@ -24,7 +24,9 @@ export default function Page1() {
               <Text style={styles.textBtn}>SIGN UP</Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity>
           <Text style={styles.text3}>HOW WE WORK?</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -38,6 +40,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundImage: "linear-gradient(to bottom , #00CCF9, #00CCF9)",
   },
   header: {
     height: '60%',
@@ -48,7 +51,6 @@ const styles = StyleSheet.create({
   body: {
     height: '40%',
     flex: 1,
-    backgroundColor: '#fff',
     justifyContent: 'space-around',
   },
   imgHearder: {

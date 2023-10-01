@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View,Image,TextInput,TouchableOpacity } from 'react-native';
 
 export default function Page7() {
@@ -30,10 +30,16 @@ export default function Page7() {
           <View style={{width:80,height:1,borderColor:'#000',borderWidth:1}}></View>
         </View>
         <View style={{flexDirection:'row',justifyContent:'space-around', width:'100%',marginTop:50}}>
+          <TouchableOpacity>
           <Image style={{width:74,height:74}} source={require('../assets/add.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity>
           <Image style={{width:74,height:74}} source={require('../assets/wifi.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity>
           <Image style={{width:74,height:74}} source={require('../assets/facebook.png')}/>
-          <Text style={{fontSize:70,fontWeight:'bold',color:'#fff',position:'absolute',right:50,top:-7}}>f</Text>
+          <Text style={{fontSize:70,fontWeight:'bold',color:'#fff',position:'absolute',right:23,top:-7}}>f</Text>
+          </TouchableOpacity>
         </View>
     </View>
   );

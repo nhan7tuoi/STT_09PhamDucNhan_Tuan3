@@ -12,7 +12,9 @@ export default function Page4() {
           <TextInput style={{ width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20 ,marginBottom:50}} placeholder='Email' />
           <View>
             <TextInput style={{ width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20 }} placeholder='Password' />
-            <Image style={{ width: 38, height: 36, position: 'absolute', right: 10, top: 10 }} source={require('../assets/eye.png')} />
+            <TouchableOpacity style={{position: 'absolute', right: 10, top: 10 }}>
+            <Image style={{ width: 38, height: 36}} source={require('../assets/eye.png')} />
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -21,14 +23,22 @@ export default function Page4() {
           <Text style={{ fontSize: 20, fontWeight: 'bold', color: '#fff' }}>LOGIN</Text>
         </TouchableOpacity>
         <Text style={{ fontSize: 15, textAlign: 'center' }}>When you agree to terms and aonditions</Text>
+        <TouchableOpacity>
         <Text style={{ fontSize: 15, textAlign: 'center', color: '#5D25FA' }}>For got your password?</Text>
+        </TouchableOpacity>
         <Text style={{ fontSize: 15, textAlign: 'center' }}>Or login with</Text>
       </View>
       <View style={styles.footer}>
         <Image style={{ width: 325, height: 48, borderRightWidth: 1, borderColor: '#0680F1' }} source={require('../assets/footer.png')} />
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff', position: 'absolute', top: 50, left: 40 }}>f</Text>
-        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff', position: 'absolute', top: 50, left: 150 }}>Z</Text>
-        <Image style={{ width: 32, height: 32, position: 'absolute', top: 60, left: 260 }} source={require('../assets/icongg.png')} />
+        <TouchableOpacity style={{position: 'absolute', top: 50, left: 40}}>
+        <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff'}}>f</Text>
+        </TouchableOpacity>
+          <TouchableOpacity style={{position: 'absolute', top: 47, left: 150}}>
+          <Text style={{ fontSize: 40, fontWeight: 'bold', color: '#fff'}}>Z</Text>
+          </TouchableOpacity>
+        <TouchableOpacity style={{position: 'absolute', top: 60, left: 260 }}>
+        <Image style={{ width: 32, height: 32}} source={require('../assets/icongg.png')} />
+        </TouchableOpacity>
       </View>
     </View>
   );

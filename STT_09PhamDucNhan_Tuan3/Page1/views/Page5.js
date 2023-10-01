@@ -10,19 +10,20 @@ export default function Page5() {
       <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Email' />
       <View>
         <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 40, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 50 }} placeholder='Password' />
-        <Image style={{ width: 38, height: 36, position: 'absolute', right: 10, top: 0 }} source={require('../assets/eye.png')} />
+        <TouchableOpacity style={{position: 'absolute', right: 10, top: 0 }}>
+        <Image style={{ width: 38, height: 36}} source={require('../assets/eye.png')} />
+        </TouchableOpacity>
       </View>
 
       <TextInput style={{ backgroundColor: '#CAE1d1', width: 330, height: 54, borderWidth: 1, borderColor: '#000', fontSize: 20, paddingLeft: 20, marginBottom: 20 }} placeholder='BirthDay' />
       <View style={{ flexDirection: 'row', width: 300 }}>
         <RadioForm
           radio_props={radio_props1}
-          initial={1}
           formHorizontal={true}
           buttonColor={'#000'}
           selectedButtonColor={'#000'}
           labelStyle={{ fontSize: 20, marginRight: 20 }}
-
+          onPress={(value) => {this.setState({value:value})}}
         />
       </View>
       <TouchableOpacity style={{ width: 310, height: 45, backgroundColor: '#E53935', marginTop: 20, marginBottom: 20, justifyContent: 'center', alignItems: 'center' }}>
@@ -33,11 +34,12 @@ export default function Page5() {
   );
 }
 var radio_props1 = [
-  { label: 'Male', value: 0},
-  { label: 'Female', value: 1 }
+  {label: 'Male', value: 0 },
+  {label: 'Female', value: 1 }
 ];
 
-// IP 11PRM
+
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,

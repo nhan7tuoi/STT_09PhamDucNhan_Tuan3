@@ -1,8 +1,7 @@
 
-import * as React from 'react';
+import * as React from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Page1 from './views/Page1';
 import Page2 from './views/Page2';
 import Page3 from './views/Page3';
@@ -15,11 +14,10 @@ import Page7 from './views/Page7';
 const Tab = createBottomTabNavigator();
 const screenOptions = {
   tabBarShowLabel: true,
+  tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
   headerShown: false,
   tabBarStyle: {
     backgroundColor: '#fff',
-    borderwidth: 1,
-    borderColor: '#red',
   }
 }
 
@@ -32,13 +30,7 @@ export default function App() {
         initialRouteName='Page1'
       >
         <Tab.Screen
-          name="Page1" component={Page1}
-          options={{
-            tabBarLabel: 'Page1',
-            // tabBarIcon: ({ }) => (
-            //   <MaterialCommunityIcons   name="Page1" color={'red'} size={'30px'} />
-            // ),
-          }} />
+          name="Page1" component={Page1} />
         <Tab.Screen name="Page2" component={Page2} />
         <Tab.Screen name="Page3" component={Page3} />
         <Tab.Screen name="Page4" component={Page4} />

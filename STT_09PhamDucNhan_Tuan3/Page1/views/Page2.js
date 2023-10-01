@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems:'center',
     justifyContent:'space-evenly',
-    backgroundColor: '#fff',
+    backgroundImage: "linear-gradient(to bottom , #fff, #00CCF9)",
     height: 700,
   },
   bodyText: {
